@@ -1,0 +1,10 @@
+---
+# tasks file for roles/packages
+    - name: intall packages
+      yum:
+        name:
+          - httpd
+          - tree
+          - vim
+        state: present
+

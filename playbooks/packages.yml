@@ -1,0 +1,13 @@
+---
+- name: package intallation
+  hosts: webservers
+  become: yes
+  tasks:
+
+    - name: intall packages
+      yum:
+        name:
+          - httpd
+          - tree
+          - vim
+        state: present

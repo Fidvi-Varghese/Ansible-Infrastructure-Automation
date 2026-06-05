@@ -1,0 +1,7 @@
+---
+# tasks file for roles/patching
+    - name: update all packages
+      yum:
+        name: "*"
+        state: latest
+

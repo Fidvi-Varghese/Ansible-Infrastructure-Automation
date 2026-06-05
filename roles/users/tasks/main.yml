@@ -1,0 +1,14 @@
+---
+# tasks file for roles/users
+    - name: create devolopers group
+      group:
+        name: devolopers
+        state: present
+
+    - name: create join users
+      user:
+        name: john
+        group: devolopers
+        shell: /bin/bash
+        state: present
+

@@ -1,0 +1,12 @@
+---
+- name: firewall conigurations
+  hosts: webservers
+  become: yes
+  tasks:
+
+    - name: enable http service 
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes

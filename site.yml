@@ -1,0 +1,13 @@
+---
+- name: configure web servers
+  hosts: webservers
+  become: yes
+
+  roles:
+    - users
+    - packages
+    - services
+    - apache
+    - firewall
+    - selinux
+    - patching

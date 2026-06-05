@@ -1,0 +1,11 @@
+---
+- name: configuring SELinux
+  hosts: webservers
+  become: yes
+
+  tasks:
+
+    - name: set selinux to enforcing
+      ansible.posix.selinux:
+        policy: targeted
+        state: enforcing

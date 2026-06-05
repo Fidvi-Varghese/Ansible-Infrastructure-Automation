@@ -1,0 +1,16 @@
+---
+- name: apache deployement
+  hosts: webservers
+  become: yes
+    
+  tasks:
+
+    - name: deploy index page
+      copy:
+        dest: /var/www/html/index.html
+        content:
+          <html>
+          <body>
+          <h1> Welcome to Ansible Managed Server <h1>
+          </body>
+          </html>

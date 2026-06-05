@@ -1,0 +1,8 @@
+---
+# tasks file for roles/services
+    - name: start and enable appache 
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
